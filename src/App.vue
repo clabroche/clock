@@ -4,13 +4,17 @@
       <router-view/>
     </div>
     <div class="nav">
+      <a @click="$router.push({name: 'dial'})" :class="{
+        active: $route.name === 'dial'
+      }">Cadran</a>
+      |
       <a @click="$router.push({name: 'doughnut'})" :class="{
         active: $route.name === 'doughnut'
       }">Donut</a>
       |
-      <a @click="$router.push({name: 'dial'})" :class="{
-        active: $route.name === 'dial'
-      }">Cadran</a>
+      <a @click="$router.push({name: 'digital'})" :class="{
+        active: $route.name === 'digital'
+      }">Numérique</a>
     </div>
     <div class="explain">
       Nous sommes le {{pad(clock.day)}}/{{pad(clock.month)}}/{{clock.year}}. Il est {{pad(clock.hours)}}:{{pad(clock.minutes)}}:{{pad(clock.seconds)}} et nous ne somme plus qu'à {{clock.universe}} secondes de l'apocalypse.
