@@ -2,6 +2,7 @@ function Clock() {
   this.percentageSeconds = 0
   this.percentageMinutes = 0
   this.percentageHours = 0
+  this.percentageHoursOn12 = 0
   this.percentageDays = 0
   this.percentageMonth = 0
   this.percentageUniverse = 0
@@ -45,8 +46,9 @@ Clock.prototype.setMinutesInfosFromDate = function(date) {
 
 /**@param {Date} date */
 Clock.prototype.setHoursInfosFromDate = function(date) {
-  this.hours = date.getHours()
+  this.hours = date.getHours() + this.percentageMinutes / 100
   this.percentageHours = this.hours * 100 / 24
+  this.percentageHoursOn12 = ((this.hours - 12) * 100 / 12)
 }
 
 /**@param {Date} date */

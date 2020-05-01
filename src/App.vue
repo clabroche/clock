@@ -4,7 +4,13 @@
       <router-view/>
     </div>
     <div class="nav">
-      <div>Doughnut</div>
+      <a @click="$router.push({name: 'doughnut'})" :class="{
+        active: $route.name === 'doughnut'
+      }">Donut</a>
+      |
+      <a @click="$router.push({name: 'dial'})" :class="{
+        active: $route.name === 'dial'
+      }">Cadran</a>
     </div>
     <div class="explain">
       Nous sommes le {{pad(clock.day)}}/{{pad(clock.month)}}/{{clock.year}}. Il est {{pad(clock.hours)}}:{{pad(clock.minutes)}}:{{pad(clock.seconds)}} et nous ne somme plus qu'à {{clock.universe}} secondes de l'apocalypse.
@@ -21,7 +27,7 @@ export default {
   },
   methods: {
     pad(d) {
-      return (d < 10) ? '0' + d.toString() : d.toString();
+      return (d < 10) ? '0' + Math.floor(d).toFixed() : Math.floor(d).toFixed();
     }
   },
 }
@@ -42,6 +48,35 @@ body {
 }
 .nav {
   margin: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff08;
+  box-shadow: 1px 1px 8px 4px #00000020;
+  border: 1px solid #34343463;
+  border-radius: 4px;
+  &,a {
+    color: #d6d6d6;
+  }
+  a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+    margin: 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: visible;
+    transition: 300ms;
+    cursor: pointer;
+    &.active {
+      color: white;
+      font-weight: bold;
+    }
+    &:hover, &.active {
+      transform: scale(1.1);
+    }
+  }
 }
 .explain {
   margin: 20px;

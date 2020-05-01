@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import ClockDoughnut from '../views/ClockDoughnut.vue'
+import ClockDial from '../views/ClockDial.vue'
 
 Vue.use(VueRouter)
 
@@ -13,6 +14,10 @@ const routes = [
     path: '/doughnut',
     name: 'doughnut',
     component: ClockDoughnut
+  }, {
+    path: '/dial',
+    name: 'dial',
+    component: ClockDial
   },
 ]
 
