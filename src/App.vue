@@ -7,21 +7,24 @@
         </transition>
       </div>
     </div>
-    <div class="nav">
-      <a @click="$router.push({name: 'dial'})" :class="{
-        active: $route.name === 'dial'
-      }">Cadran</a>
-      |
-      <a @click="$router.push({name: 'doughnut'})" :class="{
-        active: $route.name === 'doughnut'
-      }">Cercle</a>
-      |
-      <a @click="$router.push({name: 'digital'})" :class="{
-        active: $route.name === 'digital'
-      }">Numérique</a>
-    </div>
-    <div class="explain">
-      Nous sommes le {{pad(clock.day)}}/{{pad(clock.month)}}/{{clock.year}}. Il est {{pad(clock.hours)}}:{{pad(clock.minutes)}}:{{pad(clock.seconds)}} et nous ne somme plus qu'à {{clock.universe}} secondes de l'apocalypse.
+    <div class="general-infos">
+      <div class="nav">
+        <a @click="$router.push({name: 'dial'})" :class="{
+          active: $route.name === 'dial'
+        }">Cadran</a>
+        |
+        <a @click="$router.push({name: 'doughnut'})" :class="{
+          active: $route.name === 'doughnut'
+        }">Cercle</a>
+        |
+        <a @click="$router.push({name: 'digital'})" :class="{
+          active: $route.name === 'digital'
+        }">Numérique</a>
+      </div>
+      <div class="explain">
+        Nous sommes le {{pad(clock.day)}}/{{pad(clock.month)}}/{{clock.year}}.<br>
+        Il est {{pad(clock.hours)}}:{{pad(clock.minutes)}}:{{pad(clock.seconds)}}.<br>Et nous ne somme plus qu'à {{clock.universe}} secondes de l'apocalypse.
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +50,7 @@ body {
   width: 100vw;
   margin: 0;
   background-image: url('/background.jpg');
+  background-size: 200px;
   a {
     color: white;
   }
@@ -61,26 +65,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 14px 8px #0404043b;
-    background-color: #00000026;
-    border: 1px solid #797979;
+    box-shadow: 0 0 14px 8px #2323238f;
+    background-color: #1b1b1b45;
+    border: 1px solid #797979cf;
     width: 300px;
     height: 300px;
     border-radius: 50%;
-
   }
+}
+
+.general-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #21212124;
+  box-shadow: 0 0 14px 8px #23232354;
+  border: 1px solid #a6a5a563;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
 }
 .nav {
   margin: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
   display: flex;
-  align-items: center;
-  background-color: #ffffff08;
-  box-shadow: 1px 1px 8px 4px #00000020;
-  border: 1px solid #a6a5a563;
-  border-radius: 4px;
+  padding: 5px;
+  border-bottom: 1px solid #707070;
+  box-shadow: 0 13px 19px -14px #2323238f;
   &,a {
-    color: rgba(255, 255, 255, 0.37);
-    text-shadow: 0px 0px 4px #3d3d3d;
+    color: #ffffff91;
+    text-shadow: 0px 0px 4px #000000
   }
   a {
     display: flex;
@@ -89,13 +106,13 @@ body {
     width: 100px;
     height: 100%;
     margin: 0 10px;
-    padding: 10px;
+    padding: 5px 10px;
     box-sizing: border-box;
     overflow: visible;
     transition: 300ms;
     cursor: pointer;
     &.active {
-      color: white;
+      color: #cfcfcf;
       font-weight: bold;
     }
     &:hover, &.active {
@@ -104,11 +121,11 @@ body {
   }
 }
 .explain {
-  margin: 20px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.37);
-  font-size: 1.2em;
-  text-shadow: 0px 0px 4px #3d3d3d;
+  margin: 0 50px;
+  padding-bottom: 20px;
+  color: #ffffff80;
+  text-shadow: 0px 0px 4px #000000
+
 }
 #app {
   height: 100%;
