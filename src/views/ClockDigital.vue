@@ -1,12 +1,16 @@
 <template>
   <div class="clock-container">
     <number :width="width" :value="clock.hours" :padded="true"></number>
-    <div class="colon">
+    <div class="colon" :style="{
+      opacity: clock.seconds % 2 === 0 ? 0 : 1
+    }">
       <div class="point"></div>
       <div class="point"></div>
     </div>
     <number :width="width" :value="clock.minutes" :padded="true"></number>
-    <div class="colon">
+    <div class="colon" :style="{
+      opacity: clock.seconds % 2 === 0 ? 0 : 1
+    }">
       <div class="point"></div>
       <div class="point"></div>
     </div>
@@ -25,7 +29,7 @@ export default {
     return {
       clock,
       number: 8,
-      width: 30
+      width: 40
     }
   },
   mounted() {
@@ -48,11 +52,16 @@ export default {
     justify-content: space-around;
     margin: 10px calc(var(--clockDigitalColonWidth) * 2);
     width: 100%;
+    transition: 300ms;
     .point {
       border-radius: 30%;
       background-color: #fff;
       width: calc(var(--clockDigitalColonWidth) / 2);
       height: calc(var(--clockDigitalColonWidth) / 2);
+      background-color: #ffffff38;
+      box-shadow: 5px 5px 4px 2px #00000038;
+      border: 1px solid #989898;
+      box-sizing: border-box;
     }
   }
 }

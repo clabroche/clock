@@ -64,9 +64,12 @@ export default {
     justify-content: space-between;
   }
   .bar {
-    background-color: #fff;
     opacity: 0;
     transition: 300ms;
+    background-color: #ffffff38;
+    box-shadow: 10px 10px 4px 2px #00000038;
+    border: 1px solid #989898;
+    box-sizing: border-box;
     &.top {
       transition-delay: var(--numericIntegerTransitionTop);
       width: var(--numericIntegerWidth);

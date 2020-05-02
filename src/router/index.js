@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    redirect: 'doughnut'
+    redirect: 'dial'
   }, {
     path: '/doughnut',
     name: 'doughnut',

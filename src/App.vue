@@ -10,7 +10,7 @@
       |
       <a @click="$router.push({name: 'doughnut'})" :class="{
         active: $route.name === 'doughnut'
-      }">Donut</a>
+      }">Cercle</a>
       |
       <a @click="$router.push({name: 'digital'})" :class="{
         active: $route.name === 'digital'
