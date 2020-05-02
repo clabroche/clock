@@ -48,6 +48,7 @@ body {
   color: white;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   margin: 0;
   background-image: url('/background.jpg');
   background-size: 120px;
@@ -83,7 +84,7 @@ body {
   box-shadow: 0 0 14px 8px #23232354;
   border: 1px solid #a6a5a563;
   border-radius: 4px;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   padding: 5px;
 }
@@ -92,18 +93,23 @@ body {
   margin-top: 0;
   margin-bottom: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
   border-bottom: 1px solid #707070;
   box-shadow: 0 13px 19px -14px #2323238f;
+  overflow: auto;
+  width: 100%;
   &,a {
     color: #ffffff91;
     text-shadow: 0px 0px 4px #000000
   }
   a {
+    flex-shrink: 0;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: 100px;
+    width: 78px;
     height: 100%;
     margin: 0 10px;
     padding: 5px 10px;
@@ -121,15 +127,16 @@ body {
   }
 }
 .explain {
-  margin: 0 50px;
+  margin: 0 10px;
   padding-bottom: 20px;
   color: #ffffff80;
   text-shadow: 0px 0px 4px #000000
-
 }
 #app {
   height: 100%;
   max-width: 400px;
+  width: 100%;
+  overflow: hidden;
   margin: auto;
   display: flex;
   flex-direction: column;
