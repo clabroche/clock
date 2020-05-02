@@ -71,8 +71,8 @@ export default {
       transition-delay: var(--numericIntegerTransitionTop);
       width: var(--numericIntegerWidth);
       height: var(--numericIntegerWeight);
-      border-bottom-left-radius: var(--numericIntegerWeight);
-      border-bottom-right-radius: var(--numericIntegerWeight);
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
     }
     &.center {
       transition-delay: var(--numericIntegerTransitionCenter);
@@ -87,8 +87,8 @@ export default {
       transition-delay: var(--numericIntegerTransitionBottom);
       width: var(--numericIntegerWidth);
       height: var(--numericIntegerWeight);
-      border-top-left-radius: var(--numericIntegerWeight);
-      border-top-right-radius: var(--numericIntegerWeight);
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
     }
 
     &.left-top {
@@ -96,29 +96,29 @@ export default {
       transition-delay: 0;
       width: var(--numericIntegerWeight);
       height: var(--numericIntegerWidth);
-      border-bottom-right-radius: var(--numericIntegerWeight);
-      border-top-right-radius: var(--numericIntegerWeight);
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 50%;
     }
     &.right-top {
       transition-delay: var(--numericIntegerTransitionRightTop);
       width: var(--numericIntegerWeight);
       height: var(--numericIntegerWidth);
-      border-bottom-left-radius: var(--numericIntegerWeight);
-      border-top-left-radius: var(--numericIntegerWeight);
+      border-bottom-left-radius: 50%;
+      border-top-left-radius: 50%;
     }
     &.left-bottom {
       transition-delay: var(--numericIntegerTransitionLeftBottom);
       width: var(--numericIntegerWeight);
       height: var(--numericIntegerWidth);
-      border-bottom-right-radius: var(--numericIntegerWeight);
-      border-top-right-radius: var(--numericIntegerWeight);
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 50%;
     }
     &.right-bottom {
       transition-delay: var(--numericIntegerTransitionRightBottom);
       width: var(--numericIntegerWeight);
       height: var(--numericIntegerWidth);
-      border-bottom-left-radius: var(--numericIntegerWeight);
-      border-top-left-radius: var(--numericIntegerWeight);
+      border-bottom-left-radius: 50%;
+      border-top-left-radius: 50%;
     }
   }
   &.number1 {
