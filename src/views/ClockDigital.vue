@@ -46,12 +46,13 @@ export default {
   .colon {
     display: flex;
     justify-content: space-around;
-    margin: calc(var(--clockDigitalColonWidth) * 2);
+    margin: 10px calc(var(--clockDigitalColonWidth) * 2);
     width: 100%;
     .point {
+      border-radius: 30%;
       background-color: #fff;
-      width: var(--clockDigitalColonWidth);
-      height: var(--clockDigitalColonWidth);
+      width: calc(var(--clockDigitalColonWidth) / 2);
+      height: calc(var(--clockDigitalColonWidth) / 2);
     }
   }
 }
