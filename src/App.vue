@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <div class="clock-container">
-      <router-view/>
+      <div class="clock-border">
+        <transition name="fade">
+          <router-view/>
+        </transition>
+      </div>
     </div>
     <div class="nav">
       <a @click="$router.push({name: 'dial'})" :class="{
@@ -49,6 +53,22 @@ body {
 }
 .clock-container {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  .clock-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 14px 8px #0404043b;
+    background-color: #00000026;
+    border: 1px solid #797979;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+  }
 }
 .nav {
   margin: 50px;
@@ -56,10 +76,11 @@ body {
   align-items: center;
   background-color: #ffffff08;
   box-shadow: 1px 1px 8px 4px #00000020;
-  border: 1px solid #34343463;
+  border: 1px solid #a6a5a563;
   border-radius: 4px;
   &,a {
-    color: #d6d6d6;
+    color: rgba(255, 255, 255, 0.37);
+    text-shadow: 0px 0px 4px #3d3d3d;
   }
   a {
     display: flex;
@@ -85,8 +106,9 @@ body {
 .explain {
   margin: 20px;
   font-weight: bold;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.37);
   font-size: 1.2em;
+  text-shadow: 0px 0px 4px #3d3d3d;
 }
 #app {
   height: 100%;
@@ -100,5 +122,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+.fade-enter-active, .fade-leave-active {
+  position: absolute !important;
+  left: 0;
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to {
+  position: absolute !important;
+  left: 0;
+  opacity: 0;
 }
 </style>

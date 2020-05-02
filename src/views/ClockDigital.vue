@@ -29,7 +29,7 @@ export default {
     return {
       clock,
       number: 8,
-      width: 40
+      width: 25
     }
   },
   mounted() {
@@ -42,7 +42,6 @@ export default {
 .clock-container {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -50,18 +49,19 @@ export default {
   .colon {
     display: flex;
     justify-content: space-around;
-    margin: 10px calc(var(--clockDigitalColonWidth) * 2);
+    flex-direction: column;
+    margin: 5px;
     width: 100%;
     transition: 300ms;
     .point {
       border-radius: 30%;
-      background-color: #fff;
+      background-color: transparent;
       width: calc(var(--clockDigitalColonWidth) / 2);
       height: calc(var(--clockDigitalColonWidth) / 2);
-      background-color: #ffffff38;
-      box-shadow: 5px 5px 4px 2px #00000038;
-      border: 1px solid #989898;
+      box-shadow: 2px 2px 4px 2px #00000038;
+      border: 1px solid #b4b4b4;
       box-sizing: border-box;
+      margin: 5px 0;
     }
   }
 }

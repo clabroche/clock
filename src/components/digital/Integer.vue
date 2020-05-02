@@ -66,9 +66,8 @@ export default {
   .bar {
     opacity: 0;
     transition: 300ms;
-    background-color: #ffffff38;
-    box-shadow: 10px 10px 4px 2px #00000038;
-    border: 1px solid #989898;
+    box-shadow: 2px 2px 4px 2px #00000038;
+    border: 1px solid #b4b4b4;
     box-sizing: border-box;
     &.top {
       transition-delay: var(--numericIntegerTransitionTop);

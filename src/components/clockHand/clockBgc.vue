@@ -58,10 +58,7 @@ export default {
 <style lang="scss" scoped>
 .clock-bgc {
   position: absolute;
-  background-color: #00000026;
   border-radius: 50%;
-  border: 1px solid #797979;
-  box-shadow: 0 0 14px 8px #0404043b;
 }
 .point{
   width: 1px;

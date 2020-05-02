@@ -59,9 +59,11 @@ export default {
 
 <style scoped lang="scss">
 section {
+  border-radius: 50%;
   display: inline-block;
   position: relative;
   overflow: hidden;
+  margin-top: 8px
 }
 .circle {
   transform: rotate(-90deg);

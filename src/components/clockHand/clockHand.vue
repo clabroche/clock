@@ -3,7 +3,6 @@
     transform: 'rotate('+deg+'deg)',
     height: length + 'px',
     width: weight + 'px',
-    left: -weight / 2+'px',
     top: 'calc(50% - '+length+'px)'
   }"></div>
 </template>

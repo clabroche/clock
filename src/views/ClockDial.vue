@@ -1,5 +1,5 @@
 <template>
-  <div class="clock-container">
+  <div class="clock-dial-container">
     <clock-bgc></clock-bgc>
     <div class="clock-center"></div>
     <clock-hand :percentage='clock.percentageSeconds' :length="clockHandLength * 2" :weight="1"></clock-hand>
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.clock-container {
+.clock-dial-container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -37,7 +37,6 @@ export default {
   .clock-center {
     width: 10px;
     height: 10px;
-    left: -5px;
     position: absolute;
     background-color: #fff;
     border-radius: 100%;

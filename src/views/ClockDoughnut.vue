@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      doughnutSize: 180,
+      doughnutSize: 200,
       clock
     }
   },
