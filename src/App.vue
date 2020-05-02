@@ -50,7 +50,7 @@ body {
   width: 100vw;
   margin: 0;
   background-image: url('/background.jpg');
-  background-size: 200px;
+  background-size: 120px;
   a {
     color: white;
   }
